@@ -7,35 +7,33 @@
 There are various ways to set up a WordPress site. In this story, we will go through the hands-on process of setting up a WordPress site on AWS using the **Amazon Lightsail** service.
 Amazon Lightsail is the easiest way to get started with Amazon Web Services (AWS) for developers who need to build websites or web applications. It includes everything you need to launch your project quickly - instances (virtual private servers), container services, managed databases, content delivery network (CDN) distributions, load balancers, SSD-based block storage, static IP addresses, DNS management of registered domains, and resource snapshots (backups) - for a low, predictable monthly price.
 
-![5-minutes](5-minutes.png)
-
 ## Create Wordpress with Amazon Lightsail
 
 1. Go to your Console on AWS and open `Lightsail`. 
 
-![1](1.png)
+![1](img/1.png)
 
 2. Click the **Create Instance** button. 
 
 The new window will open where you will see many options, and we will go through each one individually.
 
-![2](2.png)
+![2](img/2.png)
 
-3. If you want to change Region or Availability Zone, click on **Change AWS Region and Availability Zone**. I will choose **eu-central-1** and **Zone A**
+1. If you want to change Region or Availability Zone, click on **Change AWS Region and Availability Zone**. I will choose **eu-central-1** and **Zone A**
 
-![3](3.png)
+![3](img/3.png)
 
-4. Pick your instance image, it will be Linux/Unix. As you can see, Linux/Unix supports 29 blueprints, out of which 16 are applications, and 13 are OS only. You will select WordPress.
+2. Pick your instance image, it will be Linux/Unix. As you can see, Linux/Unix supports 29 blueprints, out of which 16 are applications, and 13 are OS only. You will select WordPress.
 
-![4](4.png)
+![4](img/4.png)
 
-5. Create new SSH key pair. Click on **Create new**, then **Create**. Name your SSH key pair and click the **Generate key pair**. Just download your private key. 
+3. Create new SSH key pair. Click on **Create new**, then **Create**. Name your SSH key pair and click the **Generate key pair**. Just download your private key. 
 
-![5](5.png)
-![6](6.png)
-![7](7.png)
+![5](img/5.png)
+![6](img/6.png)
+![7](img/7.png)
 
-6. Choose your instance plan. I will choose the cheapest for this demo. 
+4. Choose your instance plan. I will choose the cheapest for this demo. 
 
 Amazon Lightsail offers a variety of instance plans to cater to different needs. These plans are designed to be simple and cost-effective, making it easy for you to choose the right one for your project.
 
@@ -47,38 +45,38 @@ It's important to choose a plan that best fits your application's needs. For exa
 
 You have to remember, **you can always start small and scale up as your needs grow.**
 
-![8](8.png)
+![8](img/8.png)
 
 **NOTE: If you choose the first three cheapest options, you'll also receive three months for free.**
 
-7. Identify your instance, I will choose default name **WordPress-1** and click the **Create Instance** button. 
+1. Identify your instance, I will choose default name **WordPress-1** and click the **Create Instance** button. 
 
-![9](9.png)
+![9](img/9.png)
 
-8. You will have to wait a few seconds, and you will get WordPress up and running. 
+2. You will have to wait a few seconds, and you will get WordPress up and running. 
 
-![10](10.png)
+![10](img/10.png)
 
-![11](11.png)
+![11](img/11.png)
 
-9. Attach static IP address to your Wordpress instance. 
+1. Attach static IP address to your Wordpress instance. 
 Click on the three dots and then select **Manage**.
 
-![12](12.png)
+![12](img/12.png)
 
 Go to **Networking** and click the **Attach static IP** button. 
 
-![13](13.png)
+![13](img/13.png)
 
 I will choose default name **StaticIp-1** and click the **Create and attach** button. 
 
-![14](14.png)
+![14](img/14.png)
 
-10. Go back to your **Instances** and connect to your Wordpress instance. 
+1.  Go back to your **Instances** and connect to your Wordpress instance. 
 
-![15](15.png)
+![15](img/15.png)
 
-11. A new window with the terminal will open. The next step is to write the command:
+2.  A new window with the terminal will open. The next step is to write the command:
 
 ```bash
 ls
@@ -93,21 +91,21 @@ cat bitnami_application_password
 
 and you will see your Wordpress password. 
 
-![16](16.png)
+![16](img/16.png)
 
-12. Copy static IP address of your instance and paste it in your address bar with **/wp-login.php.**
+1.  Copy static IP address of your instance and paste it in your address bar with **/wp-login.php.**
 
 **Ex: 3.120.162.200/wp-login.php**
 
 13. Login to your Wordpress site, with username: **user** and your password from terminal. 
 
-![17](17.png)
+![17](img/17.png)
 
-14. Welcome to your Wordpress site! 
+1.  Welcome to your Wordpress site! 
 
-![18](18.png)
+![18](img/18.png)
 
-15. If you want to add **DNS** to your instance, [watch this](https://www.youtube.com/watch?v=49aOUHkvlgg)
+2.  If you want to add **DNS** to your instance, [watch this](https://www.youtube.com/watch?v=49aOUHkvlgg)
 
 ## Conclusion 
 
